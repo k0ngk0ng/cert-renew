@@ -1,0 +1,12 @@
+[Unit]
+Description=Certificate renewal check for yunhongfu
+After=network-online.target
+Wants=network-online.target
+
+[Service]
+Type=oneshot
+WorkingDirectory=/opt/cert-manager
+Environment=CONFIG_FILE=/opt/cert-manager/config.env
+ExecStart=/opt/cert-manager/scripts/renew_check.sh
+User=root
+Group=root
