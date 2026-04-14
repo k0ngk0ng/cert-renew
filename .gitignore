@@ -1,0 +1,11 @@
+# Python cache
+__pycache__/
+*.py[cod]
+
+# Environment files
+.env
+.env.*
+!.env.example
+
+# macOS
+.DS_Store
